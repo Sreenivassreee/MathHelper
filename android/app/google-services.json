@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "541214046935",
+    "firebase_url": "https://math-crush-e3ec2.firebaseio.com",
+    "project_id": "math-crush-e3ec2",
+    "storage_bucket": "math-crush-e3ec2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:541214046935:android:a82b88f8eb8f4dbb8e0e92",
+        "android_client_info": {
+          "package_name": "com.example.math_helper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "541214046935-5ctfv0u3o8ii3fk00qf9esuopgeri5di.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ3cCksgqQFlLxaT-8aTi5lrwM_DOImQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "541214046935-5ctfv0u3o8ii3fk00qf9esuopgeri5di.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:541214046935:android:8ba75c949519a3768e0e92",
+        "android_client_info": {
+          "package_name": "com.stevebrains.MathQuiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "541214046935-kn21h21vcb37fub3hbar5geb2cjcj3lc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stevebrains.MathQuiz",
+            "certificate_hash": "9cf80271048d2831e1c4a911ebb76a9163345b45"
+          }
+        },
+        {
+          "client_id": "541214046935-5ctfv0u3o8ii3fk00qf9esuopgeri5di.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ3cCksgqQFlLxaT-8aTi5lrwM_DOImQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "541214046935-5ctfv0u3o8ii3fk00qf9esuopgeri5di.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

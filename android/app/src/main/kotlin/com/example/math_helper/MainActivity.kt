@@ -1,0 +1,6 @@
+package com.example.math_helper
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
