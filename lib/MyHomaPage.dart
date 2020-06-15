@@ -38,10 +38,11 @@ class _MyHomaPageState extends State<MyHomaPage> {
               },
             ),
             ListTile(
-              title: Text('Item 2'),
+              title: Text('Learn Before Start'),
               onTap: () {
-                // Update the state of the app.
-                // ...
+                Navigator.of(context).pushNamed(
+                  "/Learn",
+                );
               },
             ),
           ],

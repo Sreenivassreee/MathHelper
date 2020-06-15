@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:math_helper/Learn.dart';
 import 'package:math_helper/MyHomaPage.dart';
 import 'package:math_helper/QuestionsEnterPage.dart';
 import 'package:math_helper/motivation.dart';
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/home': (context) => MyHomaPage(),
         '/EnterQuestions': (context) => EnterQuestions(),
-        '/Motivation': (context) => Motivation()
+        '/Motivation': (context) => Motivation(),
+        '/Learn': (context) => Learn()
       },
     );
   }
