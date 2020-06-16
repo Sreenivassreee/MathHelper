@@ -225,7 +225,9 @@ class _LearnState extends State<Learn> {
           .document("learn")
           .collection("home")
           .document("home")
-          .setData({"pic": pic.text, "video": video.text});
+          .setData(
+        {"pic": pic.text, "video": video.text},
+      );
       print(abc);
       _mess = "Success";
 

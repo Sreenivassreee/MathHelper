@@ -45,6 +45,22 @@ class _MyHomaPageState extends State<MyHomaPage> {
                 );
               },
             ),
+            ListTile(
+              title: Text('Winners'),
+              onTap: () {
+                Navigator.of(context).pushNamed(
+                  "/WinnersPage",
+                );
+              },
+            ),
+            ListTile(
+              title: Text('EarnAds'),
+              onTap: () {
+                Navigator.of(context).pushNamed(
+                  "/EarnAds",
+                );
+              },
+            ),
           ],
         ),
       ),
