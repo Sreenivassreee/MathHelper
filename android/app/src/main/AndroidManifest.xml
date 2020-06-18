@@ -7,6 +7,7 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
+        android:name="android.support.multidex.MultiDexApplication" 
         android:label="math_helper"
         android:icon="@mipmap/ic_launcher">
         <activity

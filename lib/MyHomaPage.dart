@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:math_helper/QuestionsEnterPage.dart';
-import 'package:math_helper/motivation.dart';
 
 class MyHomaPage extends StatefulWidget {
   @override

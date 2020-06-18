@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+
 import 'package:flutter/material.dart';
 
 // final usersReference = Firestore.instance.collection("Helper");
@@ -97,7 +98,7 @@ class _EnterQuestionsState extends State<EnterQuestions> {
                                 backgroundColor: Colors.white,
                                 radius: 20,
                                 child: Text(
-                                  "$currentQuestion",
+                                  (alreadyQuestions + 1).toString(),
                                   style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 15,
@@ -245,8 +246,8 @@ class _EnterQuestionsState extends State<EnterQuestions> {
                 children: [
                   Container(
                     child: RaisedButton(
-                      onPressed: () {
-                        fireUpdaeScore(
+                      onPressed: () async {
+                        await fireUpdaeScore(
                           level: level,
                           question: question.text,
                           answer: answer.text,
@@ -254,6 +255,7 @@ class _EnterQuestionsState extends State<EnterQuestions> {
                           ia2: iAnswer2.text,
                           ia3: iAnswer3.text,
                         ).then((value) {
+                          print("value $value");
                           if (value == "Su") {
                             clear();
                             setState(() {
@@ -275,8 +277,8 @@ class _EnterQuestionsState extends State<EnterQuestions> {
                   ),
                   Container(
                     child: RaisedButton(
-                      onPressed: () {
-                        fireUpdaeScore(
+                      onPressed: () async {
+                        await fireUpdaeScore(
                           level: level,
                           question: question.text,
                           answer: answer.text,
@@ -284,6 +286,8 @@ class _EnterQuestionsState extends State<EnterQuestions> {
                           ia2: iAnswer2.text,
                           ia3: iAnswer3.text,
                         ).then((value) {
+                          print("value $value");
+
                           if (value == "Su") {
                             setState(() {
                               currentQuestion = 1;
@@ -322,6 +326,7 @@ class _EnterQuestionsState extends State<EnterQuestions> {
     iAnswer1.clear();
     iAnswer2.clear();
     iAnswer3.clear();
+    print("sree");
   }
 
   static Future<String> fireUpdaeScore(
@@ -332,7 +337,7 @@ class _EnterQuestionsState extends State<EnterQuestions> {
       String ia2,
       String ia3}) async {
     String _mess;
-    if (level == "" ||
+    if (level.toString() == "" ||
         question == "" ||
         answer == "" ||
         ia1 == "" ||
@@ -340,43 +345,96 @@ class _EnterQuestionsState extends State<EnterQuestions> {
         ia3 == "") {
       print("NUll is triggering");
     } else {
-      try {
-        var reference = Firestore.instance.collection("AllLevels");
-        reference
-            .document("M5xgqSw5RA2VaBkQEP5N")
-            .collection("Level-" + "$level")
-            .document()
-            .setData({
-          "Q": question,
-          "CA": answer,
-          "ICA1": ia1,
-          "ICA2": ia2,
-          "ICA3": ia3
-        });
-
-        _mess = "Su";
-      } catch (e) {
-        _mess = "Failed";
-      }
+      await numberOfQuestions(level).then((value) {
+        print("value $value");
+        if (value >= 1) {
+          try {
+            DocumentReference reference = Firestore.instance
+                .collection("Levels")
+                .document("Level-" + "$level");
+            reference.updateData({
+              "Level-" + "$level": FieldValue.arrayUnion([
+                {
+                  "Q": question.toString(),
+                  "CA": answer.toString(),
+                  "ICA1": ia1.toString(),
+                  "ICA2": ia2.toString(),
+                  "ICA3": ia3.toString()
+                }
+              ])
+            });
+            _mess = "Su";
+          } catch (e) {
+            _mess = "Failed";
+          }
+        } else if (value < 1) {
+          try {
+            DocumentReference reference = Firestore.instance
+                .collection("Levels")
+                .document("Level-" + "$level");
+            reference.setData({
+              "Level-" + "$level": FieldValue.arrayUnion([
+                {
+                  "Q": question.toString(),
+                  "CA": answer.toString(),
+                  "ICA1": ia1.toString(),
+                  "ICA2": ia2.toString(),
+                  "ICA3": ia3.toString()
+                }
+              ])
+            });
+            _mess = "Su";
+          } catch (e) {
+            _mess = "Failed";
+          }
+        }
+      });
     }
+    print("_mess$_mess");
     return _mess;
   }
 
-  Future<int> numberOfQuestions(_level) async {
-    int i;
+// .document("M5xgqSw5RA2VaBkQEP5N")
+//             .collection("Level-" + "$level")
+//             .document()
+//             .setData({
+//           "Q": question,
+//           "CA": answer,
+//           "ICA1": ia1,
+//           "ICA2": ia2,
+//           "ICA3": ia3
+//         });
+  static Future<int> numberOfQuestions(level) async {
+    int i = 0;
 
     try {
-      var reference = Firestore.instance.collection("AllLevels");
+      final levelReference = Firestore.instance.collection("Levels");
 
-      QuerySnapshot documentSnapshot = await reference
-          .document("M5xgqSw5RA2VaBkQEP5N")
-          .collection("Level-" + _level)
-          .getDocuments();
+      DocumentSnapshot documentSnapshot =
+          await levelReference.document("Level-" + level.toString()).get();
+      print(documentSnapshot.data["Level-" + level.toString()][0]);
 
-      i = documentSnapshot.documents.length;
+      for (int j = 0;
+          documentSnapshot.data["Level-" + level.toString()][j] != null;
+          j++) {
+        print(i);
+        i++;
+      }
+
+      // i = documentSnapshot.data.length;
     } catch (e) {
       print(e);
     }
+    print("i $i");
     return i;
   }
+
+  // updateCategory() async {
+  //   Firestore.instance.collection("test").document("Level-1").updateData({
+  //     "hi": FieldValue.arrayUnion([
+  //       {"srsdfsdfee": "sdfasdf"},
+  //     ])
+  //   });
+  // }
+
 }
