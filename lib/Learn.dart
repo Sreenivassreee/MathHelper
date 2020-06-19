@@ -213,21 +213,17 @@ class _LearnState extends State<Learn> {
   //   return i;
   // }
 
-  var referenceToLearn = Firestore.instance.collection("AllLevels");
+  var referenceToLearn = Firestore.instance.collection("Levels");
 
   Future<String> add(level) async {
     String _mess;
 
     try {
       var abc = referenceToLearn
-          .document("M5xgqSw5RA2VaBkQEP5N")
-          .collection("Level-" + level)
-          .document("learn")
+          .document("Level-" + level)
           .collection("home")
           .document("home")
-          .setData(
-        {"pic": pic.text, "video": video.text},
-      );
+          .setData({"pic": pic.text, "video": video.text}, merge: true);
       print(abc);
       _mess = "Success";
 

@@ -9,3 +9,9 @@
 Done:<br>
 1. Optimising the Db<br>
 2. make ready to add Questions<br>
+
+<h2>
+19/06/2020 night </h2>
+Done:<br>
+1. Optimising the Db for Level BY Level[ X ]<br>
+2. changed the home Larn db and make ready to add Those[ X ]<br>
