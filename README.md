@@ -15,3 +15,7 @@ Done:<br>
 Done:<br>
 1. Optimising the Db for Level BY Level[ X ]<br>
 2. changed the home Larn db and make ready to add Those[ X ]<br>
+19/07/2020 night </h2>
+Done:<br>
+1. Automated the code to insert into Db[ X ]<br>
+2. Added the show all automated Questions in the Enter Question page[ X ]<br>

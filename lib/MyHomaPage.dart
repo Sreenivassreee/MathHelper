@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:math_helper/Questions/112,113.dart';
 
 class MyHomaPage extends StatefulWidget {
   @override
@@ -7,6 +8,12 @@ class MyHomaPage extends StatefulWidget {
 
 class _MyHomaPageState extends State<MyHomaPage> {
   TextEditingController level = TextEditingController();
+  @override
+  void initState() {
+    Additions.abc();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -49,7 +49,7 @@ class _LearnState extends State<Learn> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Motivation",
+          "HomeLearn",
         ),
       ),
       body: Padding(
@@ -243,20 +243,19 @@ class _LearnState extends State<Learn> {
   Future<String> isThere(_level) async {
     String mess;
     print(_level);
+    final levelReference = Firestore.instance.collection("Levels");
 
     if (_level != "") {
       print("Not null");
       try {
-        QuerySnapshot learnDocument = await referenceToLearn
-            .document("M5xgqSw5RA2VaBkQEP5N")
-            .collection("Level-" + _level)
-            .document("learn")
+        QuerySnapshot documentSnapshot = await levelReference
+            .document("Level-" + _level)
             .collection("home")
             .getDocuments();
 
-        print(learnDocument.documents[0]['pic']);
+        print("documentSnapshot.documents${documentSnapshot.documents.length}");
 
-        if (learnDocument.documents[0] == null) {
+        if (documentSnapshot.documents.length < 1) {
           mess = "No";
         } else {
           mess = "Yes";
