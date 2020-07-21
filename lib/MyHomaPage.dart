@@ -66,6 +66,14 @@ class _MyHomaPageState extends State<MyHomaPage> {
                 );
               },
             ),
+            ListTile(
+              title: Text('LevelDetails'),
+              onTap: () {
+                Navigator.of(context).pushNamed(
+                  "/LevelDetails",
+                );
+              },
+            ),
           ],
         ),
       ),
@@ -79,6 +87,15 @@ class _MyHomaPageState extends State<MyHomaPage> {
                 width: 500,
                 child: TextField(
                   controller: level,
+                  onSubmitted: (l) {
+                    if (level != "") {
+                      Navigator.of(context).pushNamed(
+                        "/EnterQuestions",
+                        arguments: int.parse(level.text),
+                      );
+                    }
+                    level.clear();
+                  },
                   decoration: InputDecoration(
                     labelText: "Level Number",
                     border: OutlineInputBorder(

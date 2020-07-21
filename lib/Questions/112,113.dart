@@ -9,16 +9,17 @@ class Additions {
     MasterQuestion master = MasterQuestion();
 
     List list = List();
+    List li = List();
     Random random = Random();
 
-    for (var i = 1; i <= 3; i++) {
-      var a = random.nextInt(90) + 10;
+    for (var i = 1; i <= 4; i++) {
+      var a = random.nextInt(40) + 10;
 
       list.add(a);
     }
     // print(list);
-    var answer = list[0] - list[1] - list[2];
-    var question = "${list[0]} - ${list[1]} - ${list[2]}";
+    var answer = list[0] * list[1] * list[2] * list[3];
+    var question = "${list[0]} x ${list[1]} x ${list[2]} x ${list[3]}";
 
     // var answer = a + b;
     // var question = "$a + $b";
@@ -26,15 +27,26 @@ class Additions {
     // for (var j = 0; masterlist.lenght; j++) {
     //   if (masterlist[j].contains(question) || masterlist[j].contains(answer)) {}
     // }
-    var inAnswer1 = random.nextInt(150) + answer + 5;
-    var inAnswer2 = random.nextInt(30) + answer;
-    var inAnswer3 = random.nextInt(150) + answer + 10;
-    print("Question is $question");
-    // print("answer is $answer");
+    li.add(random.nextInt(3000) + answer);
+    li.add(random.nextInt(1520) + answer);
+    li.add(random.nextInt(900000));
+    print(li[0]);
+    print(li[1]);
+    print(li[2]);
+    li.shuffle();
+    li.shuffle();
 
-    // print("inAnswer1 is $inAnswer1");
-    // print("inAnswer2 is $inAnswer2");
-    // print("inAnswer3 is $inAnswer3");
+    var inAnswer1 = li[0];
+
+    var inAnswer2 = li[1];
+    var inAnswer3 = li[2];
+
+    print("Question is $question");
+    print("answer is $answer");
+
+    print("inAnswer1 is $inAnswer1");
+    print("inAnswer2 is $inAnswer2");
+    print("inAnswer3 is $inAnswer3");
     if (answer == inAnswer1 ||
         answer == inAnswer2 ||
         answer == inAnswer3 ||

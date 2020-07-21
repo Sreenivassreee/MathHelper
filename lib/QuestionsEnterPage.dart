@@ -37,7 +37,7 @@ class _EnterQuestionsState extends State<EnterQuestions> {
   }
 
   getAutomatQuestions() {
-    for (var i = 1; i <= 100; i++) {
+    for (var i = 1; i <= 110; i++) {
       master = Additions.abc();
       setState(() {
         if (master != null) {
@@ -405,6 +405,10 @@ class _EnterQuestionsState extends State<EnterQuestions> {
                                       currentQuestion++;
                                       alreadyQuestions++;
                                     });
+                                    // if (masterlist.length - 1 == i) {
+                                    //   print("End");
+                                    //   Navigator.of(context).pop();
+                                    // }
                                   }
                                 });
                                 setState(() {});
@@ -427,72 +431,73 @@ class _EnterQuestionsState extends State<EnterQuestions> {
                             ? Expanded(
                                 child: SizedBox(
                                   child: ListView.builder(
-                                      shrinkWrap: true,
-                                      itemCount: masterlist.length,
-                                      itemBuilder:
-                                          (BuildContext ctxt, int index) {
-                                        return Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Container(
-                                            color: Colors.white,
-                                            child: Row(
-                                              children: [
-                                                new Text(
-                                                  "$index )Question : ${masterlist[index].question}",
+                                    shrinkWrap: true,
+                                    itemCount: masterlist.length,
+                                    itemBuilder:
+                                        (BuildContext ctxt, int index) {
+                                      return Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Container(
+                                          color: Colors.white,
+                                          child: Row(
+                                            children: [
+                                              new Text(
+                                                "$index ) Question : ${masterlist[index].question}",
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.all(8.0),
+                                                child: Container(
+                                                  width: 5,
+                                                  height: 10,
+                                                  color: Colors.red,
                                                 ),
-                                                Padding(
-                                                  padding:
-                                                      const EdgeInsets.all(8.0),
-                                                  child: Container(
-                                                    width: 5,
-                                                    height: 10,
-                                                    color: Colors.red,
-                                                  ),
+                                              ),
+                                              Text(
+                                                "Answer : ${masterlist[index].answer}",
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.all(8.0),
+                                                child: Container(
+                                                  width: 5,
+                                                  height: 10,
+                                                  color: Colors.red,
                                                 ),
-                                                Text(
-                                                  "Answer : ${masterlist[index].answer}",
+                                              ),
+                                              Text(
+                                                "InAnswer 1 : ${masterlist[index].inAnswer1}",
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.all(8.0),
+                                                child: Container(
+                                                  width: 5,
+                                                  height: 10,
+                                                  color: Colors.red,
                                                 ),
-                                                Padding(
-                                                  padding:
-                                                      const EdgeInsets.all(8.0),
-                                                  child: Container(
-                                                    width: 5,
-                                                    height: 10,
-                                                    color: Colors.red,
-                                                  ),
+                                              ),
+                                              Text(
+                                                "InAnswer 2: ${masterlist[index].inAnswer2}",
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.all(8.0),
+                                                child: Container(
+                                                  width: 5,
+                                                  height: 10,
+                                                  color: Colors.red,
                                                 ),
-                                                Text(
-                                                  "InAnswer 1 : ${masterlist[index].inAnswer1}",
-                                                ),
-                                                Padding(
-                                                  padding:
-                                                      const EdgeInsets.all(8.0),
-                                                  child: Container(
-                                                    width: 5,
-                                                    height: 10,
-                                                    color: Colors.red,
-                                                  ),
-                                                ),
-                                                Text(
-                                                  "InAnswer 2: ${masterlist[index].inAnswer2}",
-                                                ),
-                                                Padding(
-                                                  padding:
-                                                      const EdgeInsets.all(8.0),
-                                                  child: Container(
-                                                    width: 5,
-                                                    height: 10,
-                                                    color: Colors.red,
-                                                  ),
-                                                ),
-                                                Text(
-                                                  "InAnswer 3: ${masterlist[index].inAnswer3}",
-                                                )
-                                              ],
-                                            ),
+                                              ),
+                                              Text(
+                                                "InAnswer 3: ${masterlist[index].inAnswer3}",
+                                              )
+                                            ],
                                           ),
-                                        );
-                                      }),
+                                        ),
+                                      );
+                                    },
+                                  ),
                                 ),
                               )
                             : Container()

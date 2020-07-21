@@ -19,3 +19,12 @@ Done:<br>
 Done:<br>
 1. Automated the code to insert into Db[ X ]<br>
 2. Added the show all automated Questions in the Enter Question page[ X ]<br>
+
+<h2>21/07/2020 </h2>
+
+Done:<br>
+
+<h2>Commit 1</h2><br>
+1.Storing the LevelDetails Dynamically [ X ]<br>
+2.No isses to get data (Total implementation is Over)<br>
+<h2>Commit 2</h2><br>

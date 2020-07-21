@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:math_helper/EarnAds.dart';
 import 'package:math_helper/Learn.dart';
+import 'package:math_helper/Leveldetails.dart';
 import 'package:math_helper/MyHomaPage.dart';
 import 'package:math_helper/QuestionsEnterPage.dart';
 import 'package:math_helper/WinnersPage.dart';
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget {
         '/Motivation': (context) => Motivation(),
         '/Learn': (context) => Learn(),
         '/WinnersPage': (context) => WinnersPage(),
-        '/EarnAds': (context) => EarnAds()
+        '/EarnAds': (context) => EarnAds(),
+        '/LevelDetails': (context) => LevelDetails(),
       },
     );
   }
