@@ -28,3 +28,5 @@ Done:<br>
 1.Storing the LevelDetails Dynamically [ X ]<br>
 2.No isses to get data (Total implementation is Over)<br>
 <h2>Commit 2</h2><br>
+1.Autimated the Storing the LevelDetails Dynamically from the Existing List of objests[ X ]<br>
+2.No isses to get data (Total implementation is Over)<br>

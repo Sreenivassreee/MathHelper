@@ -203,6 +203,7 @@ class _LevelDetailsState extends State<LevelDetails> {
                       Container(
                         child: RaisedButton(
                           onPressed: () async {
+                            addRowData();
                             // await fireUpdaeScore(
                             //   level: level,
                             //   question: question.text,
@@ -318,26 +319,28 @@ class _LevelDetailsState extends State<LevelDetails> {
     List<Category> li = List();
     li = askListData();
     if (li != null) {
-      for (var i = 0; i <= li.length; i++) {
+      for (var i = 0; i <= li.length - 1; i++) {
         print(i);
-        print(li[i].id);
+
+        try {
+          DocumentReference reference = Firestore.instance
+              .collection("LevelDetails")
+              .document("LevelDetails");
+          reference.setData({
+            "LevelDetails-1": FieldValue.arrayUnion([
+              {
+                "id": li[i].id,
+                "level": li[i].level,
+                "title": li[i].title,
+                "Message": li[i].message,
+                "ex": li[i].ex
+              }
+            ])
+          }, merge: true);
+        } catch (e) {
+          print(e);
+        }
       }
     }
-    try {
-      DocumentReference reference = Firestore.instance
-          .collection("LevelDetails")
-          .document("LevelDetails");
-      reference.setData({
-        "LevelDetails-1": FieldValue.arrayUnion([
-          {
-            "id": id,
-            "level": level.toString(),
-            "title": title.toString(),
-            "Message": message.toString(),
-            "ex": ex.toString()
-          }
-        ])
-      }, merge: true);
-    } catch (e) {}
   }
 }
