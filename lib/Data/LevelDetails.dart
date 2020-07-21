@@ -7,6 +7,52 @@ class Category {
   Category({this.id, this.level, this.title, this.message, this.ex});
 }
 
+List<Category> askListData() {
+  return cata;
+}
+
+final List<Category> cata = [
+  Category(
+    id: 1,
+    level: "1",
+    title: "Numbers into Spellings 1 to 100",
+    message:
+        "In this level we will work on conversions of numbers into spellings from 1 to 100",
+    ex: "1 = One",
+  ),
+  Category(
+    id: 2,
+    level: "2",
+    title: "Spellings into Numbers 1 to 100",
+    message:
+        "In this level we will work on conversions of Spellings into Numbers from 1 to 100",
+    ex: "One = 1",
+  ),
+  Category(
+    id: 3,
+    level: "3",
+    title: "Identify the Even Numbers 1-100",
+    message:
+        "In this level we will work on Identify the Even Numbers from 1 to 100",
+    ex: "Find Even Number : 1,2,3,5 || Ans : 2",
+  ),
+  Category(
+    id: 4,
+    level: "4",
+    title: "Identify the Even Numbers",
+    message: "In this level we will work on Identify the Even Numbers",
+    ex: "Find Even Number : 101,102,103,105 || Ans : 102",
+  ),
+  Category(
+    id: 5,
+    level: "5",
+    title: "Identify the Odd Numbers 1-100",
+    message:
+        "In this level we will work on Identify the Odd Numbers from 1 to 100",
+    ex: "Find Odd Number : 1,2,3,5 || Ans : 2",
+  ),
+];
+
 final List<Category> categorie = [
   Category(
     id: 1,

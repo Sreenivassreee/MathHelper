@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:math_helper/Data/LevelDetails.dart';
 
 class LevelDetails extends StatefulWidget {
   @override
@@ -311,5 +312,32 @@ class _LevelDetailsState extends State<LevelDetails> {
     // list.add(data);
     // print("list ${list[0]}");
     return i;
+  }
+
+  addRowData() {
+    List<Category> li = List();
+    li = askListData();
+    if (li != null) {
+      for (var i = 0; i <= li.length; i++) {
+        print(i);
+        print(li[i].id);
+      }
+    }
+    try {
+      DocumentReference reference = Firestore.instance
+          .collection("LevelDetails")
+          .document("LevelDetails");
+      reference.setData({
+        "LevelDetails-1": FieldValue.arrayUnion([
+          {
+            "id": id,
+            "level": level.toString(),
+            "title": title.toString(),
+            "Message": message.toString(),
+            "ex": ex.toString()
+          }
+        ])
+      }, merge: true);
+    } catch (e) {}
   }
 }
