@@ -140,17 +140,17 @@ final List<Category> categorie = [
   Category(
     id: 12,
     level: "12",
-    title: "Substactions ( E ) with 2",
+    title: "Subtractions ( E ) with 2",
     message:
-        "In this level we will work on Substactions in Easy level Problems with 2 numbers",
+        "In this level we will work on Subtractions in Easy level Problems with 2 numbers",
     ex: "1 - 1 || Ans : 0",
   ),
   Category(
     id: 13,
     level: "13",
-    title: "Substactions ( M ) with 2",
+    title: "Subtractions ( M ) with 2",
     message:
-        "In this 13th level u will work on Substactions in Medium level Problems with 2 numbers",
+        "In this 13th level u will work on Subtractions in Medium level Problems with 2 numbers",
     ex: "6 - 2 || Ans : 4",
   ),
   Category(
@@ -204,17 +204,17 @@ final List<Category> categorie = [
   Category(
     id: 20,
     level: "20",
-    title: "Substactions ( E ) with 3",
+    title: "Subtractions ( E ) with 3",
     message:
-        "In this level u will work on Substactions in Easy level Problems with 3 numbers",
+        "In this level u will work on Subtractions in Easy level Problems with 3 numbers",
     ex: "1 - 1 - 1 || Ans : -1",
   ),
   Category(
     id: 21,
     level: "21",
-    title: "Substactions ( M ) with 3",
+    title: "Subtractions ( M ) with 3",
     message:
-        "In this level u will work on Substactions in Medium level Problems with 3 numbers",
+        "In this level u will work on Subtractions in Medium level Problems with 3 numbers",
     ex: "7 - 2 - 1 || Ans : 4",
   ),
   Category(
@@ -252,17 +252,17 @@ final List<Category> categorie = [
   Category(
     id: 26,
     level: "26",
-    title: "Substactions ( E ) with 4",
+    title: "Subtractions ( E ) with 4",
     message:
-        "In this level u will work on Substactions in Easy level Problems with 4 numbers",
+        "In this level u will work on Subtractions in Easy level Problems with 4 numbers",
     ex: "1 - 1 - 1 - 1 || Ans : - 2 ",
   ),
   Category(
     id: 27,
     level: "27",
-    title: "Substactions ( M ) with 4",
+    title: "Subtractions ( M ) with 4",
     message:
-        "In this level u will work on Substactions in Medium level Problems with 4 numbers",
+        "In this level u will work on Subtractions in Medium level Problems with 4 numbers",
     ex: "9 - 5 - 8 - 1 || Ans : - 5 ",
   ),
   Category(
@@ -300,17 +300,17 @@ final List<Category> categorie = [
   Category(
     id: 32,
     level: "32",
-    title: "Substactions ( E ) with 5",
+    title: "Subtractions ( E ) with 5",
     message:
-        "In this level u will work on Substactions in Easy level Problems with 5 numbers",
+        "In this level u will work on Subtractions in Easy level Problems with 5 numbers",
     ex: "1 - 1 - 1 - 1 - 1 || Ans : - 3 ",
   ),
   Category(
     id: 33,
     level: "33",
-    title: "Substactions ( M ) with 5",
+    title: "Subtractions ( M ) with 5",
     message:
-        "In this level u will work on Substactions in Medium level Problems with 5 numbers",
+        "In this level u will work on Subtractions in Medium level Problems with 5 numbers",
     ex: "5 - 8 - 4 - 6 - 9 || Ans : - 22 ",
   ),
   Category(
@@ -720,17 +720,17 @@ final List<Category> categorie = [
   Category(
     id: 86,
     level: "86",
-    title: "Substactions[E] 2 digit with 1 digit",
+    title: "Subtractions[E] 2 digit with 1 digit",
     message:
-        "In this level we will work on Substactions Easy level Problems,2 digits with 1 digit,with 2 numbers",
+        "In this level we will work on Subtractions Easy level Problems,2 digits with 1 digit,with 2 numbers",
     ex: "11 - 1 || Ans : 10",
   ),
   Category(
     id: 87,
     level: "87",
-    title: "Substactions[M] 2 digit with 1 digit",
+    title: "Subtractions[M] 2 digit with 1 digit",
     message:
-        "In this level we will work on Substactions Medium level Problems,2 digits with 1 digit,with 2 numbers",
+        "In this level we will work on Subtractions Medium level Problems,2 digits with 1 digit,with 2 numbers",
     ex: "71 - 5 || Ans : 66",
   ),
   Category(
@@ -784,17 +784,17 @@ final List<Category> categorie = [
   Category(
     id: 94,
     level: "94",
-    title: "Substactions[E] 2 digit with 2 digit",
+    title: "Subtractions[E] 2 digit with 2 digit",
     message:
-        "In this level we will work on Substactions Easy level Problems,2 digits with 2 digits,with 2 numbers",
+        "In this level we will work on Subtractions Easy level Problems,2 digits with 2 digits,with 2 numbers",
     ex: "11 - 11 || Ans : 0",
   ),
   Category(
     id: 95,
     level: "95",
-    title: "Substactions[M] 2 digit with 2 digit",
+    title: "Subtractions[M] 2 digit with 2 digit",
     message:
-        "In this level we will work on Substactions Medium level Problems,2 digits with 2 digits,with 2 numbers",
+        "In this level we will work on Subtractions Medium level Problems,2 digits with 2 digits,with 2 numbers",
     ex: "99 - 33 || Ans : 66",
   ),
   Category(
@@ -848,17 +848,17 @@ final List<Category> categorie = [
   Category(
     id: 102,
     level: "102",
-    title: "Substactions[E] 2 digit with 2 digit",
+    title: "Subtractions[E] 2 digit with 2 digit",
     message:
-        "In this level we will work on Substactions Easy level Problems,2 digits with 2 digits,with 3 numbers",
+        "In this level we will work on Subtractions Easy level Problems,2 digits with 2 digits,with 3 numbers",
     ex: "11 - 11 - 11 || Ans : -11",
   ),
   Category(
     id: 103,
     level: "103",
-    title: "Substactions[M] 2 digit with 2 digit",
+    title: "Subtractions[M] 2 digit with 2 digit",
     message:
-        "In this level we will work on Substactions Medium level Problems,2 digits with 2 digits,with 3 numbers",
+        "In this level we will work on Subtractions Medium level Problems,2 digits with 2 digits,with 3 numbers",
     ex: "43 - 62 - 23 || Ans : -42",
   ),
   Category(
@@ -896,17 +896,17 @@ final List<Category> categorie = [
   Category(
     id: 108,
     level: "108",
-    title: "Substactions[E] 2 digit with 2 digit",
+    title: "Subtractions[E] 2 digit with 2 digit",
     message:
-        "In this level we will work on Substactions Easy level Problems,2 digits with 2 digits,with 4 numbers",
+        "In this level we will work on Subtractions Easy level Problems,2 digits with 2 digits,with 4 numbers",
     ex: "11 - 11 - 11 - 11 || Ans : -22",
   ),
   Category(
     id: 109,
     level: "109",
-    title: "Substactions[M] 2 digit with 2 digit",
+    title: "Subtractions[M] 2 digit with 2 digit",
     message:
-        "In this level we will work on Substactions Medium level Problems,2 digits with 2 digits,with 4 numbers",
+        "In this level we will work on Subtractions Medium level Problems,2 digits with 2 digits,with 4 numbers",
     ex: "11 - 11 - 11 - 11 || Ans : -22",
   ),
   Category(
@@ -944,7 +944,7 @@ final List<Category> categorie = [
   Category(
     id: 114,
     level: "114",
-    title: "Substactions[E] 2 digit with 2 digit",
+    title: "Subtractions[E] 2 digit with 2 digit",
     message:
         "In this level we will work on Additions Easy level Problems,2 digits with 2 digits,with 5 numbers",
     ex: "11 - 11 - 11 - 11 - 11 || Ans : 55",
@@ -952,7 +952,7 @@ final List<Category> categorie = [
   Category(
     id: 115,
     level: "115",
-    title: "Substactions[M] 2 digit with 2 digit",
+    title: "Subtractions[M] 2 digit with 2 digit",
     message:
         "In this level we will work on Additions Medium level Problems,2 digits with 2 digits,with 5 numbers",
     ex: "11 - 11 - 11 - 11 - 11 || Ans : -33",

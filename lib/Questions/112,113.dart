@@ -10,17 +10,20 @@ class Additions {
 
     List list = List();
     List li = List();
+    var b;
     Random random = Random();
 
-    for (var i = 1; i <= 5; i++) {
-      var a = random.nextInt(90) + 10;
+    for (var i = 1; i <= 4; i++) {
+      var a = random.nextInt(25) + 10;
+      // b = random.nextInt(9);
 
       list.add(a);
     }
     // print(list);
-    var answer = list[0] - list[1] - list[2] - list[3] - list[4];
-    var question =
-        "${list[0]} - ${list[1]} - ${list[2]} - ${list[3]} - ${list[4]}";
+    var answer = list[0] * list[1] / list[2];
+    // - list[2] - list[3] - list[4];
+    var question = "${list[0]} x ${list[1]} / ${list[2]}";
+    // - ${list[2]} - ${list[3]} - ${list[4]}";
 
     // var answer = a + b;
     // var question = "$a + $b";
@@ -28,19 +31,19 @@ class Additions {
     // for (var j = 0; masterlist.lenght; j++) {
     //   if (masterlist[j].contains(question) || masterlist[j].contains(answer)) {}
     // }
-    li.add(random.nextInt(150));
-    li.add(random.nextInt(200));
-    li.add(random.nextInt(200));
+    li.add(random.nextInt(5));
+    li.add(random.nextInt(20) - answer);
+    li.add(random.nextInt(30) + answer);
     // print(li[0]);
     // print(li[1]);
     // print(li[2]);
     li.shuffle();
     li.shuffle();
 
-    var inAnswer1 = li[0] + answer;
-
-    var inAnswer2 = li[1] + answer;
-    var inAnswer3 = li[2] + answer;
+    var inAnswer1 = li[0];
+    var inAnswer2 = li[1];
+    //- answer;
+    var inAnswer3 = li[2];
 
     // print("Question is $question");
     // print("answer is $answer");
@@ -58,10 +61,10 @@ class Additions {
     } else {
       master = MasterQuestion(
         question: question.toString(),
-        answer: answer.toString(),
-        inAnswer1: inAnswer1.toString(),
-        inAnswer2: inAnswer2.toString(),
-        inAnswer3: inAnswer3.toString(),
+        answer: answer.round().toString(),
+        inAnswer1: inAnswer1.round().toString(),
+        inAnswer2: inAnswer2.round().toString(),
+        inAnswer3: inAnswer3.round().toString(),
       );
       return master;
     }

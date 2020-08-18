@@ -45,11 +45,11 @@ class _EnterQuestionsState extends State<EnterQuestions> {
         }
       });
     }
-    print(masterlist[19].question);
-    print(masterlist[19].answer);
-    print(masterlist[19].inAnswer1);
-    print(masterlist[19].inAnswer2);
-    print(masterlist[19].inAnswer3);
+    // print(masterlist[19].question);
+    // print(masterlist[19].answer);
+    // print(masterlist[19].inAnswer1);
+    // print(masterlist[19].inAnswer2);
+    // print(masterlist[19].inAnswer3);
   }
 
   @override
